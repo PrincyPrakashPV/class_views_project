@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block content %}
+
+ <h1>Add Task Here.....</h1>
+            <form method="post">
+                {% csrf_token %}
+                <input type="text" name="name" placeholder="Task_name" ><br><br>
+                <input type="text" name="priority" placeholder="Task_priority"><br><br>
+                <input type="date" name="date" placeholder="Task_date"><br><br>
+                <a href="{% url 'create' %}"><input type="submit" value="Add_task"></a>
+            </form>
+{% endblock %}

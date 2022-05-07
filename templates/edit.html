@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1 xmlns="http://www.w3.org/1999/html">UPDATE Task Here.....</h1>
+            <form method="post">
+                {% csrf_token %}
+                {{form.as_p}}
+                <input type="submit" class="btn btn-success" value="submit">
+            </form>
+{% endblock %}
